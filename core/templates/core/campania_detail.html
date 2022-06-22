@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'core_campania_list' %}">campania Listing</a></p>
+<table class="table">
+<tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>slug</td><td>{{ object.slug }}</td></tr>
+<tr><td>created</td><td>{{ object.created }}</td></tr>
+<tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+<tr><td>fecha_desde</td><td>{{ object.fecha_desde }}</td></tr>
+<tr><td>fecha_hasta</td><td>{{ object.fecha_hasta }}</td></tr>
+<tr><td>dias_duracion</td><td>{{ object.dias_duracion }}</td></tr>
+<tr><td>region</td><td>{{ object.region }}</td></tr>
+<tr><td>comuna</td><td>{{ object.comuna }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit campania</a>
+
+{% endblock %}

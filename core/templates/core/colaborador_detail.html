@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'core_colaborador_list' %}">colaborador Listing</a></p>
+<table class="table">
+<tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>slug</td><td>{{ object.slug }}</td></tr>
+<tr><td>created</td><td>{{ object.created }}</td></tr>
+<tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+<tr><td>apellido</td><td>{{ object.apellido }}</td></tr>
+<tr><td>rut</td><td>{{ object.rut }}</td></tr>
+<tr><td>fecha_nacimiento</td><td>{{ object.fecha_nacimiento }}</td></tr>
+<tr><td>direccion</td><td>{{ object.direccion }}</td></tr>
+<tr><td>comuna</td><td>{{ object.comuna }}</td></tr>
+<tr><td>telefono</td><td>{{ object.telefono }}</td></tr>
+<tr><td>email</td><td>{{ object.email }}</td></tr>
+<tr><td>cuenta_banco</td><td>{{ object.cuenta_banco }}</td></tr>
+<tr><td>tipo_cuenta_banco</td><td>{{ object.tipo_cuenta_banco }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit colaborador</a>
+
+{% endblock %}
